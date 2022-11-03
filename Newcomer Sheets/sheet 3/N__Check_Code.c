@@ -19,14 +19,15 @@ int main ()
 
     if (str [a] == '-')
     {
-        for ( i = 0; str [i] >= '0' && str [i] <= '9'; i++)
+        for ( i = 0; str [i] != '\0'; i++)
         {
-            f++;
-
-            if (str [i] == str [a - 1])
+            if (str[i] == str[a])
             {
-                i++;
+                continue;
             }
+            
+
+            f++;
             
         }
         
