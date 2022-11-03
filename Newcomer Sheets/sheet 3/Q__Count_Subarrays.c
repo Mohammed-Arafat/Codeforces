@@ -21,21 +21,16 @@ int main ()
 
         for ( size = 1; size <= n; size++)
         {
-            for ( i = 0; i <= n - size; i++)
+            for ( i = 0, x = 0; i <= n - size; i++, x = 0)
             {
-                for ( j = i; j < i + size; j++)
+                for ( j = i; j < i + size - 1; j++)
                 {
-                    if (j <= i + size - 2)
+                    if (ar [j] < ar [j + 1])
                     {
-                        if (ar [j] < ar [j + 1])
-                        {
-                            x++;
-                        }
-                        
+                        x++;
                     }
                     
                 }
-
                 if (x == size - 1)
                 {
                     count++;
